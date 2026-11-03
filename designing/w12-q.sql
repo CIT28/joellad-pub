@@ -1,9 +1,10 @@
 -- starting the pow workflow
 .mode box
-.output '| cat >> powa.txt'
+.output '| cat >> pow-a.txt'
 
 -- ⬇️ WRITE YOUR QUERIES BELOW THIS LINE ⬇️
 -- (Remember to .print 'description' before each query)
+.print 'Schema for single table version of longlist.db'
 
 
 -- ⬆️ END OF QUERIES ⬆️
