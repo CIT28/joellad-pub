@@ -4,7 +4,9 @@
 
 Answer :  My guess is to use a back slash, similar to a website. 
 sqlite3 ps0/cyberchase.db < p4-q.sql
-correct - bash command (for reference): 
+
+Correct Answer:  - bash command (for reference): 
 sqlite3 ../querying/longlist.db < w12-q.sql
+
 ../ exits the designing folder.
 The terminal must be in the BASH designing folder to pull database. 
