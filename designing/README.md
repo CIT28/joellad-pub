@@ -40,3 +40,44 @@ Normalization is then used to gather this information.
 ## Normalization
 
 Normalization is used to improve the design of a database. Normalizing involves separating content into multiple tables to reduce redundancies. Additional columns or information within each table should be specific to the individual table.
+
+## Storage Classes - The classes, and how a data type differs from a storage class. Start this around 27:35.
+
+Storage Classes:
+-   Null: Means no value. Nothing is there
+-   Integer:  Means a Whole number
+-   - 7 different data types. 0,1,2,3,4,6,8     
+
+-   Real: Decimals 1.2 or 2.4 
+-   Text: Characters
+-   Blob: Binarey large Object. Like imaginaing and audio files
+
+Data Types differ from Storage Classes in that Storage Classes "hold" data types.
+7 different data types. 0 byte integer,1,2,3,4,6,8    
+
+## My Answer — do we need to specify data types in our schema?
+-   No Sqlite determines which data type is used. Only storage class must be identified.
+
+## Examples and Understanding — the examples from the lecture and your understanding of the tradeoff. Add a bit of your own research if it helps.
+$0.10 must be stored as a text due to the dollar sign. 10 would be stored as a integer number. .10 would be used as a real number.
+
+Text cannot be added like math so in instances where the table will be used to determine usage, text is not a good selection.
+
+Using Real numbers can result in inaccurate results due numbers trailing the decimal.
+
+Integers however would not work for this situation and the quantity being used is cents.
+
+## Type Affinities — what they are, and how they differ from storage classes.
+
+Individual columns can be made to store certain storage classes. In sqlite there are 5 affinity types. Type affinities pertain to individual columns. A column will convert the data added to the infinity of the column.  
+
+Text
+Numeric
+Integer
+Real
+BLOB
+
+
+## For Example — after the lecture example, write your own example of how type affinities work.
+
+For example, placing a Real number .10 in to a column with a integer affinity will result in the number becoming 10 and treated as an interger moving forward.
