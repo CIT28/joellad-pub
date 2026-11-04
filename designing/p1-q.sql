@@ -10,21 +10,44 @@
 -- .print 'Schema for multiple table version of longlist.db'
 .schema
 
-CREATE TABLE "riders" (
-    "id",
-    "name"
-);
+-- CREATE TABLE "riders" (
+--     "id",
+--     "name"
+-- );
 
-CREATE TABLE "stations" (
-    "id",
-    "name",
-    "line"
-);
+-- CREATE TABLE "stations" (
+--     "id",
+--     "name",
+--     "line"
+-- );
 
-CREATE TABLE "visits" (
-    "rider_id",
-    "station_id"
-);
+-- CREATE TABLE "visits" (
+--     "rider_id",
+--     "station_id"
+-- );
+
+-- DROP TABLE "riders";
+
+-- DROP TABLE "stations";
+
+-- DROP TABLE "visits";
+
+
+-- CREATE TABLE "riders" (
+--     "id" INTEGER,
+--     "name" TEXT
+-- );
+
+-- CREATE TABLE "stations" (
+--     "id" INTEGER, 
+--     "name" TEXT,
+--     "line" TEXT
+-- );
+
+-- CREATE TABLE "visits" (
+--     "rider_id" INTEGER,
+--     "station_id" INTEGER
+-- );
 
 
 

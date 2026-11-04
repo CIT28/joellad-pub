@@ -81,3 +81,11 @@ BLOB
 ## For Example — after the lecture example, write your own example of how type affinities work.
 
 For example, placing a Real number .10 in to a column with a integer affinity will result in the number becoming 10 and treated as an interger moving forward.
+
+## Boolean
+
+I had not previously heard of boolean. It is a math term commonly used to represent true or false. It can also be used to set a condition like greater than or less than which also leads the reader to claim whether the statement is one that is true or one that is false.
+
+## Table Constraints
+
+I do not specificially hear contraints. Constraints are placed on the data based on the column affinity. INTEGER serves the same purpose as Bool in sqlite in that the answer will be 1 or 0. Constraints are placed on the table by the creator who specifies the storage classes.
