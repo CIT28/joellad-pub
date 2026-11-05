@@ -105,3 +105,39 @@ CREATE TABLE "visits" (
     PRIMARY KEY("rider_id", "station_id")
 );
 ``` 
+
+# Designing Part 2
+
+## Column Constraints
+
+-   CHECK: Places a constraint to where the column will "check" to ensure a condition is met.
+
+-   DEFAULT:  A default value is used when a new row is added without a value.
+
+-   NOT NULL:  Ensures that an empty value is not in 
+
+-   UNIQUE:  Ensures that every row has a unique value.
+
+
+## Constraints: Primary Key and Foreign Key
+
+Not that when column constraints are applied, they take place inside of the coma (,) and after the storage class. 
+
+NOT NULL is unnessesary to use for Primary and Foreign ID's because the Table Constraint ensures that a value is applied. A unique value is also unnessesary for primary and foreign keys because they must be unique in nature. 
+
+```
+-- CREATE TABLE "riders" (
+--     "id" INTEGER,
+--     "name" TEXT NOT NULL,
+--     PRIMARY KEY("id")
+-- );
+```
+
+```
+-- CREATE TABLE "stations" (
+--     "id" INTEGER, 
+--     "name" TEXT NOT NULL UNIQUE,
+--     "line" TEXT NOT NULL
+--     PRIMARY KEY("id")
+);
+```
