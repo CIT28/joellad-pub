@@ -2,12 +2,12 @@
 .mode box
 .output '| cat >> pow-p1.txt'
 .print '<-------->'
--- .print 'Schema for single table version of longlist.db'
+-- .print 'Schema for single table version of mbta.db'
 
 -- ⬇️ WRITE YOUR QUERIES BELOW THIS LINE ⬇️
 -- (Remember to .print 'description' before each query)
 
--- .print 'Schema for multiple table version of longlist.db'
+-- .print 'Schema for multiple table version of mbta.db'
 .schema
 
 -- CREATE TABLE "riders" (
@@ -49,6 +49,28 @@
 --     "station_id" INTEGER
 -- );
 
+
+-- CREATE TABLE "riders" (
+--     "id" INTEGER,
+--     "name" TEXT,
+--     PRIMARY KEY("id")
+-- );
+
+-- CREATE TABLE "stations" (
+--     "id" INTEGER, 
+--     "name" TEXT,
+--     "line" TEXT,
+--     PRIMARY KEY("id")
+-- );
+
+-- CREATE TABLE "visits" (
+--     "id" INTEGER,
+--     "rider_id" INTEGER,
+--     "station_id" INTEGER,
+--     PRIMARY KEY("id")
+--     FOREIGN KEY("rider_id") REFERENCES "riders"("id"),
+--     FOREIGN KEY("station_id") REFERENCES "stations"("id")
+-- );
 
 
 -- ⬆️ END OF QUERIES ⬆️

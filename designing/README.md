@@ -89,3 +89,19 @@ I had not previously heard of boolean. It is a math term commonly used to repres
 ## Table Constraints
 
 I do not specificially hear contraints. Constraints are placed on the data based on the column affinity. INTEGER serves the same purpose as Bool in sqlite in that the answer will be 1 or 0. Constraints are placed on the table by the creator who specifies the storage classes.
+
+Covered at 46:33. Constraints covered are Primary & Foreign Keys but these are not the only constraints.  
+
+Primary keys - must be unique and cannot repeat. A Foreign key must have a value within another table to meet the constraint.
+
+Sqlite automatically creates a Primary Key which is called *** row id *** RowID cannot be seen within the table but can be used within a query to identify needed data. 
+
+*** Below is an example of creating a table where there is a Joint Primary Key. This constraint requires every combination to be unique. ***
+
+```
+CREATE TABLE "visits" (
+    "rider_id" INTEGER,
+    "station_id" INTEGER,
+    PRIMARY KEY("rider_id", "station_id")
+);
+``` 
