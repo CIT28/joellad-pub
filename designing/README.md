@@ -161,3 +161,10 @@ Parse error near line 13: no such column: ""type""
   ALTER TABLE "swipes" DROP COLUMN "type";
                      error here ---^
 ```
+
+
+# Summary
+
+A table cannot be dropped if a primary or foreign key was being referenced. By default, SQLite is Numeric.
+
+There are several constraints that can be used within a table but is unnecessary when dealing with keys. There are also many ways to update table columns, names, types which can include dropping the table all together.
