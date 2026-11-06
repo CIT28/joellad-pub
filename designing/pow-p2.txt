@@ -19,3 +19,18 @@ CREATE TABLE "visits" (
     FOREIGN KEY("rider_id") REFERENCES "riders"("id"),
     FOREIGN KEY("station_id") REFERENCES "stations"("id")
 );
+<-------->
+column constraints example
+CREATE TABLE "riders" (
+    "id" INTEGER,
+    "name" TEXT
+);
+CREATE TABLE "stations" (
+    "id" INTEGER,
+    "name" TEXT,
+    "line" TEXT
+);
+CREATE TABLE "visits" (
+    "rider_id" INTEGER,
+    "station_id" INTEGER
+);
