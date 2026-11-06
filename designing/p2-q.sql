@@ -9,8 +9,29 @@
 
 -- .print 'Schema for multiple table version of mbta.db'
 
-.print 'column constraints example'
+-- .print 'column constraints example'
 .schema
+
+CREATE TABLE "riders" (
+    "id" INTEGER,
+    "name" TEXT
+);
+
+CREATE TABLE "stations" (
+    "id" INTEGER,
+    "name" TEXT,
+    "line" TEXT
+);
+
+CREATE TABLE "visits" (
+    "rider_id" INTEGER,
+    "station_id" INTEGER
+);
+
+-- ALTER TABLE "visits" RENAME TO "swipes";
+-- ALTER TABLE "swipes" ADD COLUMN "type" TEXT;
+-- ALTER TABLE "swipes" RENAME COLUMN "type" TO "type";
+-- ALTER TABLE "swipes" DROP COLUMN "type";
 
 -- CREATE TABLE "riders" (
 --     "id" INTEGER,

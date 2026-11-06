@@ -141,3 +141,23 @@ NOT NULL is unnessesary to use for Primary and Foreign ID's because the Table Co
 --     PRIMARY KEY("id")
 );
 ```
+
+## Altering Tables
+
+- DROP TABLE
+- ALTER TABLE - ALTER TABLE "visits"
+- DROP COLUMN
+- RENAME TO 
+- RENAME COLUMN TO
+- ADD COLUMN
+
+ALTER TABLE "visits" RENAME TO "swipes";
+
+Carter showed an example where Type was misspelled, but I typed it correctly. This resulted in an error when trying to drop the "type" which was TEXT 
+
+```
+sqlite> ALTER TABLE "swipes" DROP COLUMN "type";
+Parse error near line 13: no such column: ""type""
+  ALTER TABLE "swipes" DROP COLUMN "type";
+                     error here ---^
+```

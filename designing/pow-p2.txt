@@ -34,3 +34,14 @@ CREATE TABLE "visits" (
     "rider_id" INTEGER,
     "station_id" INTEGER
 );
+<-------->
+CREATE TABLE "stations" (
+    "id" INTEGER,
+    "name" TEXT,
+    "line" TEXT
+);
+CREATE TABLE "swipes" (
+    "rider_id" INTEGER,
+    "station_id" INTEGER
+);
+
