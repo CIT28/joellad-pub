@@ -42,20 +42,33 @@
 
 -- DROP TABLE "donuts";
 
-.print 'orders'
-CREATE TABLE "orders" (
-    "id" INTEGER,
--- provides order number
-    "cutomer" TEXT NOT NULL,
--- ensures cutomer name
-    "donut_id" INTEGER NOT NULL,
--- lists donuts in order
+-- .print 'orders'
+-- CREATE TABLE "orders" (
+--     "id" INTEGER,
+-- -- provides order number
+--     "cutomer" TEXT NOT NULL,
+-- -- ensures cutomer name
+--     "donut_id" INTEGER NOT NULL,
+-- -- lists donuts in order
+--     PRIMARY KEY("id"),
+--     FOREIGN KEY ("donut_id") REFERENCES "donut"("id")
+-- );
+
+
+.print 'customers'
+CREATE TABLE "customers" (
+    "id" TEXT,
+    "first_name" TEXT NOT NULL,
+-- ensures customer first name provided
+    "last_name" TEXT NOT NULL,
+-- ensures customer last name provided
+    "phone_number" INTEGER NOT NULL,
+--- provides a unique link of customer order
+    "orders_id" INTEGER NOT NULL,
+-- links customers to order history
     PRIMARY KEY("id"),
-    FOREIGN KEY ("donut_id") REFERENCES "donut"("id")
+    FOREIGN KEY ("orders_id") REFERENCES "orders"("id")
 );
-
-
-
 
 
 -- ⬆️ END OF QUERIES ⬆️
