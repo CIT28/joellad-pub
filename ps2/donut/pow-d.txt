@@ -32,3 +32,17 @@ CREATE TABLE "donuts" (
     PRIMARY KEY("id"),
     FOREIGN KEY("ingredients_id") REFERENCES "ingredients"("id")
 );
+
+
+.print 'orders'
+CREATE TABLE "orders" (
+    "id" INTEGER,
+-- provides order number
+    "cutomer" TEXT NOT NULL,
+-- ensures cutomer name
+    "donut_id" INTEGER NOT NULL,
+-- lists donuts in order
+    PRIMARY KEY("id"),
+    FOREIGN KEY ("donut_id") REFERENCES "donut"("id")
+);
+

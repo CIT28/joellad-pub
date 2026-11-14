@@ -7,40 +7,53 @@
 -- ⬇️ WRITE YOUR QUERIES BELOW THIS LINE ⬇️
 -- (Remember to .print 'description' before each query)
 
-.print "ingredients"
-CREATE TABLE "ingredients" (
-    "id" INTEGER NOT NULL,
-    "name" TEXT NOT NULL,
--- provides name for each ingredient
-    "price_per_unit" INTEGER NOT NULL,
--- satisfys ingredient cost
-    "unit_of_measure" TEXT NOT NULL,
--- specifys measure of ingredient
-    "quantity_on_hand" REAL,
--- provides remaining quantity
-    PRIMARY KEY("id")
-);
+-- .print "ingredients"
+-- CREATE TABLE "ingredients" (
+--     "id" INTEGER NOT NULL,
+--     "name" TEXT NOT NULL,
+-- -- provides name for each ingredient
+--     "price_per_unit" INTEGER NOT NULL,
+-- -- satisfys ingredient cost
+--     "unit_of_measure" TEXT NOT NULL,
+-- -- specifys measure of ingredient
+--     "quantity_on_hand" REAL,
+-- -- provides remaining quantity
+--     PRIMARY KEY("id")
+-- );
 
 
 -- DROP TABLE "ingredients";
 
-.print 'donuts'
-CREATE TABLE "donuts" (
-    "id" INTEGER NOT NULL,
-    "name" TEXT NOT NULL,
--- ensures all donuts are listed
-    "gluten-free" TEXT NOT NULL,
--- satisfys gluten identifier
-    "price_per_donut" REAL NOT NULL,
--- ensures cost per donut
-    "ingredients" TEXT NOT NULL,
--- ensures donut ingredients are listed
-    "ingredients_id" TEXT NOT NULL,
-    PRIMARY KEY("id"),
-    FOREIGN KEY("ingredients_id") REFERENCES "ingredients"("id")
-);
+-- .print 'donuts'
+-- CREATE TABLE "donuts" (
+--     "id" INTEGER NOT NULL,
+--     "name" TEXT NOT NULL,
+-- -- ensures all donuts are listed
+--     "gluten-free" TEXT NOT NULL,
+-- -- satisfys gluten identifier
+--     "price_per_donut" REAL NOT NULL,
+-- -- ensures cost per donut
+--     "ingredients" TEXT NOT NULL,
+-- -- ensures donut ingredients are listed
+--     "ingredients_id" TEXT NOT NULL,
+--     PRIMARY KEY("id"),
+--     FOREIGN KEY("ingredients_id") REFERENCES "ingredients"("id")
+-- );
 
 -- DROP TABLE "donuts";
+
+.print 'orders'
+CREATE TABLE "orders" (
+    "id" INTEGER,
+-- provides order number
+    "cutomer" TEXT NOT NULL,
+-- ensures cutomer name
+    "donut_id" INTEGER NOT NULL,
+-- lists donuts in order
+    PRIMARY KEY("id"),
+    FOREIGN KEY ("donut_id") REFERENCES "donut"("id")
+);
+
 
 
 
