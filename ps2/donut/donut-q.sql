@@ -2,18 +2,13 @@
 .mode box
 .output '| cat >> pow-d.txt'
 .print '<-------->'
--- .print 'Schema for single table version of mbta.db'
+-- .print 'Schema for single table version of donut.db'
 
 -- ⬇️ WRITE YOUR QUERIES BELOW THIS LINE ⬇️
 -- (Remember to .print 'description' before each query)
 
--- .print 'Schema for multiple table version of mbta.db'
 .schema
 
--- CREATE TABLE "riders" (
---     "id",
---     "name"
--- );
 
 
 
@@ -23,4 +18,4 @@
 -- changes back to stdout
 .output stdout
 
--- bash command (for reference): sqlite3 ?? < donut-q.sql
+-- bash command (for reference): sqlite3 donut.db < donut-q.sql
