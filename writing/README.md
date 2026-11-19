@@ -18,4 +18,4 @@
 - Why title and accession_number cannot be NULL
     - These items are required as a reference. If there is no title, then there is no title, there is no item to be discusssed.
 - Why accession_number must be UNIQUE
-    - Accession_number can become confused get if it is not unique
+    - Accession_number can become confused get if it is not unique.

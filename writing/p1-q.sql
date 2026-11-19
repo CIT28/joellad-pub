@@ -18,9 +18,26 @@
 --     "acquired" NUMERIC,
 --     PRIMARY KEY("id")
 -- );
-.print 'schema'
-.schema
-  
+-- .print 'schema'
+-- .schema
+
+-- .print 'Profusion of flowers'
+-- INSERT INTO "collections" ("id", "title", "accession_number", "acquired")
+--     VALUES (1, 'Profusion of flowers', '56.257', '1956-04-12');
+
+-- .print 'Farmers working at dawn'
+-- INSERT INTO "collections" ("id", "title", "accession_number", "acquired")
+--     VALUES (2, 'Farmers wrking at dawn', '11.6152', '1911-08-03');
+
+-- .print 'Sprint outing'
+-- INSERT INTO "collections" ("id", "title", "accession_number", "acquired")
+--     VALUES (3, 'Spring outing', '14.76', '1914-01-08');
+
+
+.print 'add rows'
+SELECT * FROM "collections";
+
+
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
 
 -- changes back to stdout    
