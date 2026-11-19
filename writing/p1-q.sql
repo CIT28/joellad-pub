@@ -34,8 +34,22 @@
 --     VALUES (3, 'Spring outing', '14.76', '1914-01-08');
 
 
-.print 'add rows'
-SELECT * FROM "collections";
+-- .print 'add rows'
+-- SELECT * FROM "collections";
+
+-- .print 'Sprint outing without id'
+-- INSERT INTO "collections" ("title", "accession_number", "acquired")
+--     VALUES ('Spring outing', '14.76', '1914-01-08');
+
+-- .print 'duplicate accession_number'
+-- INSERT INTO "collections" ("title", "accession_number", "acquired")
+--     VALUES ('Spring outing', '14.76', '1914-01-08');
+
+-- .print 'NULL title or accession_number'
+-- INSERT INTO "collections" ("title", "accession_number", "acquired")
+--     VALUES (NULL, NULL, '1900-01-10');
+
+
 
 
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file

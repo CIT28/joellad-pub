@@ -14,3 +14,18 @@ add rows
 │  2 │ Farmers wrking at dawn │ 11.6152          │ 1911-08-03 │
 │  3 │ Spring outing          │ 14.76            │ 1914-01-08 │
 ╰────┴────────────────────────┴──────────────────┴────────────╯
+.print 'Sprint outing without id'
+INSERT INTO "collections" ("title", "accession_number", "acquired")
+    VALUES ('Spring outing', '14.76', '1914-01-08');
+
+duplicate accession_number
+
+```
+Error near line 6: UNIQUE constraint failed: collections.accession_number
+```
+
+NULL title or accession_number
+
+```
+Error near line 1: NOT NULL constraint failed: collections.title
+```

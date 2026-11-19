@@ -10,7 +10,7 @@
 
 - MFA tracks artwork in a collections table
 
-    - Museum of fine art
+    - Museum of fine art. When a id number is not specified, the system automatically uses the next highest number. If a row is deleted, the id number remains unused.
 
 - How INSERT INTO works: Works by adding information into a database.
     - INSERT INTO "table" ("column1", "column2") VALUES ('value1', 'value2');
