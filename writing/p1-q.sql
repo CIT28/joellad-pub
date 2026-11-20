@@ -65,8 +65,13 @@
 -- .import --csv mfa.csv temp
 -- .print 'temp table temp table without id'
 -- SELECT * FROM "temp";
+-- .print 'insert temp into collections'
+-- -- INSERT INTO "collections" ("title", "accession_number", "acquired")
+-- --     SELECT "title", "accession_number", "acquired" FROM "temp";
+-- SELECT * FROM "collections";
 
-
+-- .print 'drop temp'
+-- DROP TABLE "temp";
 
 
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
