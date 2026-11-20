@@ -73,6 +73,10 @@
 -- .print 'drop temp'
 -- DROP TABLE "temp";
 
+-- .print 'delete row'
+-- DELETE FROM "collections" WHERE "title" = 'Spring outing';
+-- SELECT * FROM "collections";
+
 
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
 
