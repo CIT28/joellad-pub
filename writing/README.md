@@ -30,3 +30,11 @@
     .import --csv -- skip 1 is the command. --csv lets the system know that the file is a csv and -- skip 1 says to skip the header row. the table does not need quotes because it is a SQLite command
 
     .import --csv --skip 1 mfa.csv collections
+
+    ## Deletion
+
+    -   Deleting can be completed by row using the WHERE clause. Forgetting to use this clause will result in the table being deleted. When transferring data (.import) from CSV files do not transfer with NULL fields because the information is initially converted to text, so the NULL value will have to be added.
+
+    -   When selecting to delete, you must remove the * (all) clause as you do not wish to delete ALL but ONLY so DELETE FROM is the command to be used.
+
+    -   I deleted then reimported the table so unsure why I had some rows missing, I assume that was a version update.

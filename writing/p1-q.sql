@@ -66,8 +66,8 @@
 -- .print 'temp table temp table without id'
 -- SELECT * FROM "temp";
 -- .print 'insert temp into collections'
--- -- INSERT INTO "collections" ("title", "accession_number", "acquired")
--- --     SELECT "title", "accession_number", "acquired" FROM "temp";
+-- INSERT INTO "collections" ("title", "accession_number", "acquired")
+--     SELECT "title", "accession_number", "acquired" FROM "temp";
 -- SELECT * FROM "collections";
 
 -- .print 'drop temp'
@@ -75,6 +75,14 @@
 
 -- .print 'delete row'
 -- DELETE FROM "collections" WHERE "title" = 'Spring outing';
+-- SELECT * FROM "collections";
+
+-- .print 'delete empty acquired - note table updated to correct line 1'
+-- DELETE FROM "collections" WHERE "acquired" = '';
+-- SELECT * FROM "collections";
+
+-- .print 'delete multiple rows by date'
+-- DELETE FROM "collections" WHERE "acquired" < '1909-01-01';
 -- SELECT * FROM "collections";
 
 
