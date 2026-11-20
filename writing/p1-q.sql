@@ -56,11 +56,18 @@
 -- --     ('Peonies and butterfly', '06.1899', '1906-01-01');
 -- SELECT * FROM "collections";
 
-.print 'schema'
-.schema
+-- .print 'schema'
+-- .schema
 
-.print 'imported csv'
-SELECT * FROM "collections";
+-- .print 'imported csv'
+-- SELECT * FROM "collections";
+
+-- .import --csv mfa.csv temp
+-- .print 'temp table temp table without id'
+-- SELECT * FROM "temp";
+
+
+
 
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
 
