@@ -38,3 +38,32 @@
     -   When selecting to delete, you must remove the * (all) clause as you do not wish to delete ALL but ONLY so DELETE FROM is the command to be used.
 
     -   I deleted then reimported the table so unsure why I had some rows missing, I assume that was a version update.
+
+    ## Foreign Key Constraints
+
+    -   A table with a primary key that is referrenced by another table. When this table is deleted, it effects the integrity of the related table. This can result in relationships missing. 
+
+    This causes a foreign key constaint error 
+
+    .print 'foreign key constraint error'
+DELETE FROM "artists" WHERE "name" = 'Unidentified artist';
+
+```
+Error near line 6: FOREIGN KEY constraint failed
+```
+
+In order to correct this, delete the foreign key affiliation first.
+
+```
+-- .print 'delete foreign key affiliation of UA'
+-- DELETE FROM "created" WHERE "artist_id" = (
+--     SELECT "id" FROM "artists" WHERE "name" = 'Unidentified artist'
+-- );
+-- SELECT * FROM "created";
+```
+
+```
+-- .print 'foreign key constraint error'
+-- -- DELETE FROM "artists" WHERE "name" = 'Unidentified artist';
+-- SELECT * FROM "artists";
+```

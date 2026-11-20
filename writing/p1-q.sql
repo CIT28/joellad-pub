@@ -83,7 +83,29 @@
 
 -- .print 'delete multiple rows by date'
 -- DELETE FROM "collections" WHERE "acquired" < '1909-01-01';
--- SELECT * FROM "collections";
+-- sqlite3 mfa.db
+
+-- .schema
+
+-- .print 'collections'
+-- SELECT * FROM "collections" LIMIT 5;
+
+-- .print 'artists'
+-- SELECT * FROM "artists" LIMIT 5;
+
+-- .print 'created'
+-- SELECT * FROM "created" LIMIT 5;
+
+-- .print 'delete foreign key affiliation of UA'
+-- DELETE FROM "created" WHERE "artist_id" = (
+--     SELECT "id" FROM "artists" WHERE "name" = 'Unidentified artist'
+-- );
+-- SELECT * FROM "created";
+
+-- .print 'foreign key constraint error'
+-- -- DELETE FROM "artists" WHERE "name" = 'Unidentified artist';
+-- SELECT * FROM "artists";
+
 
 
 -- After each commit comment out the queries written and then continue to write your queries in this part of the file
